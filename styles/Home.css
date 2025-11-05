@@ -1,0 +1,250 @@
+#Home{
+    display: block;
+}
+#HomePage{
+    /* height: 85vh; */
+    width: 100%;
+    background-color: var(--foreground);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: var(--defaultpadd);
+}
+
+#HomePage > .HeroContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#HomePage > .HeroContent > div{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+#HomePage > .HeroContent > div > article{
+    letter-spacing: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ffffff ;
+}
+#HomePage > .HeroContent > div > h1{
+    font-weight: 700;
+    line-height: 1;
+    font-size: 56px;
+    color: #ffffff;
+}
+#HomePage > .HeroContent > div > p{
+    font-weight: 500;
+    font-size: 15px;
+    color:  #ffffff;
+}
+#HomePage > .HeroContent > div > div > button{
+    display: inline;
+    text-align: center;
+    background-color: var(--paleyellowButton);
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 1em;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.ZX9SPEAKER{
+    width: 100%;
+    padding: var(--defaultpadd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ZX9SPEAKER > .ZX9SPEAKER_Secondparent{
+    height: auto;
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-color: var(--paleyellowButton);
+    overflow: hidden;
+    border-radius: 8px;
+}
+.ZX9SPEAKER > .ZX9SPEAKER_Secondparent > div{
+    height: 500px;
+    width: calc(100% / 2);
+}
+.ZX9SPEAKER > .ZX9SPEAKER_Secondparent::before{
+    content:'';
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    width: 900px;
+    height: 900px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 50%;
+}
+.ZX9SPEAKER_heroImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ZX9SPEAKER_heroImg > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+.ZX9SPEAKER_heroImg > div > img{
+    height: 80%;
+    position: absolute;
+    bottom: -2em;
+    z-index: 20;
+}
+.ZX9SPEAKER_heroImg > div::before{
+    content:'';
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    bottom: -30%;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 50%;
+}
+.ZX9SPEAKER_heroImg > div::after{
+    content:'';
+    position: absolute;
+    width: 400px;
+    bottom: -25%;
+    height: 400px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 50%;
+}
+.ZX9SPEAKER_writeup{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 3em;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+    z-index: 30;
+}
+.ZX9SPEAKER_writeup > h1{
+    font-weight: 700;
+    font-size: 56px;
+    color: var(--background);
+    line-height: 1;
+}
+.ZX9SPEAKER_writeup p{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--background);
+}
+.ZX9SPEAKER_writeup > div > button{
+    padding:1em;
+    text-align: center;
+    display: inline;
+    background-color: var(--foreground);
+    color: var(--background);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.YX1EARPHONES{
+    width: 100%;
+    padding:0 var(--defaultpadd);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.YX1EARPHONES >.YX1EARPHONES_lines{
+    height: 320px;
+    overflow: hidden;
+    background-color: #adacae;
+    position: relative;
+    border-radius: 8px;
+    background: url("../public/tablespeaker.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.YX1EARPHONES_lines > div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    gap: 1em;
+}
+.YX1EARPHONES_lines > div > h1{
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+}
+.YX1EARPHONES_lines > div > div > button{
+    display: inline-flex;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1em;
+    background-color: var(--foreground);
+    color: var(--background);
+    font-size: 13px;
+    font-weight: 700;
+}
+/* .YX1EARPHONES >.YX1EARPHONES_lines > img{
+    position: absolute;
+    right: -37%;
+    bottom: 0;
+} */
+
+.YX1EARPHONES > .YX1EARPHONES_twobrothers{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+    align-items: center;
+}
+.YX1EARPHONES_twobrothers > div{
+    height: 320px;
+    background-color: #000000;
+    border-radius: 8px;
+}
+.smartchargingpod{
+    overflow: hidden;
+    width: 100%;
+}
+.smartchargingpod img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+.smartBrotherElement{
+    background: #F1F1F1 !important;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+    flex-direction: column;
+}
+.smartBrotherElement > h1{
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+}
+.smartBrotherElement > div{
+    display: block;
+}
+.smartBrotherElement > div > button{
+    padding: 1em;
+    color: white;
+    background-color: #000000;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+}

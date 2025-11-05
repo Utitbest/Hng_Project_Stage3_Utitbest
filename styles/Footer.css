@@ -1,0 +1,55 @@
+footer{
+    width: 100%;
+    background-color: var(--foreground);
+    margin-top:3em;
+    padding: 3em var(--defaultpadd);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 3em;
+}
+footer > nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+footer > .footernav > ul{
+    display: flex;
+    flex: 1;
+    gap: 3em;
+    justify-content: flex-end;
+}
+footer > nav > ul > li{
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--background);
+}
+footer > nav > ul > li:hover{
+  color: #D87D4A;
+}
+footer > article{
+    font-weight: 400;
+    font-size: 14px;
+    max-width: 540px;
+    color: var(--background);
+}
+footer > span{
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--background);
+}
+
+.social_icons{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    right: 4.7em;
+    bottom: 30%;
+}
+.social_icons > svg path:hover{
+    fill: #D87D4A;
+    cursor: pointer;
+}
