@@ -4,19 +4,25 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ConvexClientProvider from "./ConvexClientProvider";
 import {CartProvider} from "@/app/context/CartContext"
+import Head from "next/head";
 const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"], 
 });
 
 export const metadata = {
-  title: "Audiophile E-Commerce",
-  description: "Stage 3 HNG Task - Next.js + Convex + Tailwind",
+  title: "Utitbest-Audiophile E-Commerce ",
+  description: "Audiophile E-Commerce: Shop premium headphones and audio accessories with a seamless, responsive, and modern online shopping experience.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href="/utitbestsiteIcon.png" />
+      </Head>
       <body className={`${manrope.className} bg-gray-50 text-gray-800 flex flex-col min-h-screen`}>
         <ConvexClientProvider>
           <CartProvider>

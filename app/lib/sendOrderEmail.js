@@ -7,7 +7,7 @@ export const sendOrderEmail = async (email, orderId, cartItems, totals) => {
       order_id: orderId,
       orders: cartItems.map((item) => ({
         name: item.nickname,
-        image_url: `/${item.image}`,
+        image_url: `https://ecommerce-utitbest.netlify.app/${item.image}`,
         units: item.quantity,
         price: item.price,
       })),
