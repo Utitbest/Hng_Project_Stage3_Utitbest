@@ -252,4 +252,8 @@
   .gallery-left {
     flex-direction: row;
   }
+  .related-grid{
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -196,11 +196,6 @@
     font-size: 13px;
     font-weight: 700;
 }
-/* .YX1EARPHONES >.YX1EARPHONES_lines > img{
-    position: absolute;
-    right: -37%;
-    bottom: 0;
-} */
 
 .YX1EARPHONES > .YX1EARPHONES_twobrothers{
     display: grid;
@@ -247,4 +242,43 @@
     font-weight: 700;
     font-size: 13px;
     cursor: pointer;
+}
+@media (max-width: 800px){
+    #HomePage{
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+    .upmand{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .HeroContent{
+        position: absolute;
+        left:50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
+    #HomePage > .HeroContent > div{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ZX9SPEAKER_Secondparent{
+        flex-direction: column;
+    }
+    .ZX9SPEAKER > .ZX9SPEAKER_Secondparent > div{
+        width: 100% !important;
+        align-items: center;
+    }
+    .ZX9SPEAKER_writeup > h1 > br{
+        display: none !important;
+    }
+    #HomePage > .HeroContent > div > p{
+        text-align: center;
+    }
 }

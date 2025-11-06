@@ -1,5 +1,5 @@
 "use client";
-
+import  {sendOrderEmail}  from "@/app/lib/sendOrderEmail";
 import { useCart } from "@/app/context/CartContext";
 import { useRouter } from "next/navigation";
 import { useState, useMemo } from "react";
@@ -7,7 +7,7 @@ import OrderConfirmationModal from "../components/OrderConfirmationModal";
 export default function CheckoutPage() {
   const { cartItems, clearCart } = useCart();
   const [showModal, setShowModal] = useState(false);
-  const router = useRouter();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,19 +25,31 @@ export default function CheckoutPage() {
     () => cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0),
     [cartItems]
   );
-  const shipping = 50;
-  const vat = total * 0.2;
-  const grandTotal = total + shipping + vat;
+    const shipping = 50; 
+    const vat = total * 0.2; 
+    const grandTotal = total + shipping + vat;
 
-  const handleSubmit = (e) => {
+    
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (cartItems.length === 0) {
       alert("Your cart is empty!");
       return;
     }
+    setLoading(true);
+    const orderId = `ORD-${Date.now().toString().slice(-6)}`;
+    const totals = {
+      shipping ,
+      vat,
+      grandTotal,
+    };
+    const {success} = await sendOrderEmail(formData.email, orderId, cartItems, totals);
+    setLoading(false);
+  if (success) {
     setShowModal(true);
-    // clearCart();
-    // router.push("/");
+  } else {
+    alert("Order placed, but email failed to send.");
+  }
   };
 
   const handleChange = (e) => {
@@ -182,10 +194,37 @@ export default function CheckoutPage() {
         </div>
 
         <button
+          disabled={loading}
           type="submit"
-          className="w-full bg-[#D87D4A] hover:bg-[#fba172] text-white font-semibold py-4 rounded-lg uppercase"
+          className="flex items-center justify-center gap-2 w-full bg-[#D87D4A] hover:bg-[#fba172] text-white font-semibold py-4 rounded-lg uppercase"
         >
-          Continue & Pay
+          {loading ? (
+            <>
+              <svg
+                className="animate-spin h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                ></path>
+              </svg>
+              Processing...
+            </>
+          ) : (
+            "Continue & Pay"
+          )}
         </button>
       </form>
 

@@ -19,7 +19,7 @@ export default function OrderConfirmationModal({ total, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 top-0 left-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 top-0 left-0 bg-[#000000bf] bg-opacity-50 z-50 flex items-center justify-center">
       <div className="bg-white w-[90%] md:w-[480px] rounded-xl p-8 shadow-xl text-center animate-fadeIn">
         <div className="flex justify-center mb-6">
           <div className="bg-[#d87d4a] rounded-full w-12 h-12 flex items-center justify-center">

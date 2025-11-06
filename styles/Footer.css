@@ -53,3 +53,31 @@ footer > span{
     fill: #D87D4A;
     cursor: pointer;
 }
+@media (max-width:800px){
+    footer > nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2em;
+    }
+    .social_icons{
+        bottom: 39px;
+    }
+}
+@media (max-width:630px){
+    footer{
+        align-items: center;
+    }
+    .social_icons{
+        position:unset;
+    }
+    footer > nav{
+        align-items: center;
+    }
+}
+@media (max-width:530px){
+    footer > .footernav > ul{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

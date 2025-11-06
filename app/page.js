@@ -26,7 +26,7 @@ export default function Home() {
         </div>
 
 
-        <div>
+        <div className="upmand">
           <img src="/HeroImg.png"  alt="Hero PIcture default" />
         </div>
       </div>

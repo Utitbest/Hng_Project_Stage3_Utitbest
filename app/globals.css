@@ -28,6 +28,12 @@
   }
 } */
 
+@media (max-width: 800px) {
+  :root {
+    --defaultpadd: 40px;
+  }
+}
+
 body {
   background: var(--background);
   /* color: var(--foreground); */
@@ -181,8 +187,6 @@ button{
     margin-bottom: 2em;
 }
 
-
-
 .helo{
     display: inline;
     text-align: center;
@@ -194,4 +198,24 @@ button{
     padding: 1em;
     white-space: nowrap;
     cursor: pointer !important; 
+}
+@media (max-width:800px) {
+    .Bringing_you_the_best_audio_gear > div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .bring_gear_writeup{
+        order: 2;
+        height: auto !important;
+        width: 100%;
+        margin: 2em 0;
+    }
+    .bring_gear_writeup > h1{
+        text-align: center;
+    }
+    .bring_gear_writeup article{
+        text-align: center;
+        padding: 0;
+    }
 }
