@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/utitbestsiteIcon.png" />
+        <link rel="icon" href="https://ecommerce-utitbest.netlify.app/utitbestsiteIcon.png" />
       </Head>
       <body className={`${manrope.className} bg-gray-50 text-gray-800 flex flex-col min-h-screen`}>
         <ConvexClientProvider>
