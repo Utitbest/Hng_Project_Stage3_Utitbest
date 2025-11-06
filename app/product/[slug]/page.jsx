@@ -31,8 +31,24 @@ export default function ProductPage() {
 
 
 
-  if (product === undefined) return <p>Loading product...</p>;
-  if (!product) return <h1>Product not found</h1>;
+  if (product === undefined) {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "50px" }}>
+      <div className="spinner"></div>
+        <p>Loading product...</p>
+      </div>
+    );
+  }
+  if (!product) return <h1 
+      style={{ 
+        fontWeight: "bold", 
+        textAlign: "center", 
+        marginTop: "50px", 
+        marginBottom: "50px" 
+      }}
+    >
+      Product not found
+    </h1>
   
 
 
